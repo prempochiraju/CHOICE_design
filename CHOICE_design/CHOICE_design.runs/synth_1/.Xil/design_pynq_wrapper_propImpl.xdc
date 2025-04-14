@@ -1,5 +1,6 @@
-set_property SRC_FILE_INFO {cfile:C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc rfile:../../../../hw_src/constraints/base_constraints.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/FPGA/CHOICE-PUF/hw_src/constraints/PUF_constraints.xdc rfile:../../../../hw_src/constraints/PUF_constraints.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc rfile:../../../CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc rfile:../../../CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc rfile:../../../CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc id:3} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 create_pblock PUF_Block_Zone
 resize_pblock [get_pblocks PUF_Block_Zone] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
@@ -2067,3 +2068,49 @@ set_property src_info {type:XDC file:2 line:1157 export:INPUT save:INPUT read:RE
 set_property BEL DFF [get_cells {design_1_i/CHOICE_PUF_gen_0/U0/GEN_PUF[127].PUF/FDCPE_inst}]
 set_property src_info {type:XDC file:2 line:1158 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC SLICE_X20Y84 [get_cells -hierarchical -regexp .*GEN_PUF.127..PUF/CARRY4_inst]
+set_property src_info {type:XDC file:3 line:1 export:INPUT save:INPUT read:READ} [current_design]
+reset_run design_pynq_write_adapter_0_0_synth_1
+set_property src_info {type:XDC file:3 line:2 export:INPUT save:INPUT read:READ} [current_design]
+reset_run synth_1
+set_property src_info {type:XDC file:3 line:3 export:INPUT save:INPUT read:READ} [current_design]
+launch_runs synth_1 -jobs 16
+set_property src_info {type:XDC file:3 line:4 export:INPUT save:INPUT read:READ} [current_design]
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_pynq_write_adapter_0_0
+set_property src_info {type:XDC file:3 line:5 export:INPUT save:INPUT read:READ} [current_design]
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+set_property src_info {type:XDC file:3 line:6 export:INPUT save:INPUT read:READ} [current_design]
+[Mon Apr 14 16:44:42 2025] Launched design_pynq_write_adapter_0_0_synth_1...
+set_property src_info {type:XDC file:3 line:7 export:INPUT save:INPUT read:READ} [current_design]
+Run output will be captured here: C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/design_pynq_write_adapter_0_0_synth_1/runme.log
+set_property src_info {type:XDC file:3 line:8 export:INPUT save:INPUT read:READ} [current_design]
+[Mon Apr 14 16:44:42 2025] Launched synth_1...
+set_property src_info {type:XDC file:3 line:9 export:INPUT save:INPUT read:READ} [current_design]
+Run output will be captured here: C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/runme.log
+set_property src_info {type:XDC file:3 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H16 [get_ports sys_clk]
+set_property src_info {type:XDC file:3 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports sys_clk]
+set_property src_info {type:XDC file:3 line:15 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -name sys_clk -period 10.000 [get_ports sys_clk]
+set_property src_info {type:XDC file:3 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R19 [get_ports resetn]
+set_property src_info {type:XDC file:3 line:21 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports resetn]
+set_property src_info {type:XDC file:3 line:32 export:INPUT save:INPUT read:READ} [current_design]
+reset_run design_pynq_write_adapter_0_0_synth_1
+set_property src_info {type:XDC file:3 line:33 export:INPUT save:INPUT read:READ} [current_design]
+reset_run synth_1
+set_property src_info {type:XDC file:3 line:34 export:INPUT save:INPUT read:READ} [current_design]
+launch_runs synth_1 -jobs 16
+set_property src_info {type:XDC file:3 line:35 export:INPUT save:INPUT read:READ} [current_design]
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_pynq_write_adapter_0_0
+set_property src_info {type:XDC file:3 line:36 export:INPUT save:INPUT read:READ} [current_design]
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+set_property src_info {type:XDC file:3 line:37 export:INPUT save:INPUT read:READ} [current_design]
+[Mon Apr 14 16:44:42 2025] Launched design_pynq_write_adapter_0_0_synth_1...
+set_property src_info {type:XDC file:3 line:38 export:INPUT save:INPUT read:READ} [current_design]
+Run output will be captured here: C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/design_pynq_write_adapter_0_0_synth_1/runme.log
+set_property src_info {type:XDC file:3 line:39 export:INPUT save:INPUT read:READ} [current_design]
+[Mon Apr 14 16:44:42 2025] Launched synth_1...
+set_property src_info {type:XDC file:3 line:40 export:INPUT save:INPUT read:READ} [current_design]
+Run output will be captured here: C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/runme.log

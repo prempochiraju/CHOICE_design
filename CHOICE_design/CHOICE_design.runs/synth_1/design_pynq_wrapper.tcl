@@ -113,15 +113,20 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc
-set_property used_in_implementation false [get_files C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc]
+read_xdc C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc
+set_property used_in_implementation false [get_files C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc]
 
-read_xdc C:/FPGA/CHOICE-PUF/hw_src/constraints/PUF_constraints.xdc
-set_property used_in_implementation false [get_files C:/FPGA/CHOICE-PUF/hw_src/constraints/PUF_constraints.xdc]
+read_xdc C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc
+set_property used_in_implementation false [get_files C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc]
+
+read_xdc C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc
+set_property used_in_implementation false [get_files C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/utils_1/imports/synth_1/design_pynq_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

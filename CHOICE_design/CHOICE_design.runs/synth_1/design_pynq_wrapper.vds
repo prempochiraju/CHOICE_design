@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Mon Apr 14 17:05:24 2025
-# Process ID: 18304
+# Start of session at: Mon Apr 14 17:42:29 2025
+# Process ID: 39548
 # Current directory: C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1
 # Command line: vivado.exe -log design_pynq_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_pynq_wrapper.tcl
 # Log file: C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/design_pynq_wrapper.vds
@@ -12,33 +12,39 @@
 # Running On: FT-6K64K74, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 16, Host memory: 136633 MB
 #-----------------------------------------------------------
 source design_pynq_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 485.062 ; gain = 185.309
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 486.465 ; gain = 187.141
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/CHOICE-PUF/hw_src/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 500.312 ; gain = 9.875
+Command: read_checkpoint -auto_incremental -incremental C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/utils_1/imports/synth_1/design_pynq_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/utils_1/imports/synth_1/design_pynq_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top design_pynq_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16680
+INFO: [Synth 8-7075] Helper process launched with PID 16916
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1381.770 ; gain = 437.430
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1386.074 ; gain = 439.109
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_pynq_wrapper' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/hdl/design_pynq_wrapper.vhd:41]
 INFO: [Synth 8-3491] module 'design_pynq' declared at 'c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:1574' bound to instance 'design_pynq_i' of component 'design_pynq' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/hdl/design_pynq_wrapper.vhd:68]
 INFO: [Synth 8-638] synthesizing module 'design_pynq' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:1604]
-INFO: [Synth 8-3491] module 'design_pynq_CHOICE_PUF_gen_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_CHOICE_PUF_gen_0_0_stub.vhdl:6' bound to instance 'CHOICE_PUF_gen_0' of component 'design_pynq_CHOICE_PUF_gen_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2157]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_CHOICE_PUF_gen_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_CHOICE_PUF_gen_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'design_pynq_PUF_controller_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_PUF_controller_0_0_stub.vhdl:6' bound to instance 'PUF_controller_0' of component 'design_pynq_PUF_controller_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2166]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_PUF_controller_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_PUF_controller_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_pynq_CHOICE_PUF_gen_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_CHOICE_PUF_gen_0_0_stub.vhdl:6' bound to instance 'CHOICE_PUF_gen_0' of component 'design_pynq_CHOICE_PUF_gen_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2157]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_CHOICE_PUF_gen_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_CHOICE_PUF_gen_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_pynq_PUF_controller_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_PUF_controller_0_0_stub.vhdl:6' bound to instance 'PUF_controller_0' of component 'design_pynq_PUF_controller_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2166]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_PUF_controller_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_PUF_controller_0_0_stub.vhdl:22]
 WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:1803]
-INFO: [Synth 8-3491] module 'design_pynq_axi_dma_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'design_pynq_axi_dma_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2179]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_axi_dma_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_axi_dma_0_0_stub.vhdl:118]
-INFO: [Synth 8-3491] module 'design_pynq_processing_system7_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'design_pynq_processing_system7_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2287]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_processing_system7_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_processing_system7_0_0_stub.vhdl:74]
+INFO: [Synth 8-3491] module 'design_pynq_axi_dma_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'design_pynq_axi_dma_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2179]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_axi_dma_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_axi_dma_0_0_stub.vhdl:118]
+INFO: [Synth 8-3491] module 'design_pynq_processing_system7_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'design_pynq_processing_system7_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2287]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_processing_system7_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_processing_system7_0_0_stub.vhdl:74]
 INFO: [Synth 8-638] synthesizing module 'design_pynq_ps7_0_axi_periph_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:876]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1G0LDUX' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:62]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1G0LDUX' (0#1) [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:62]
@@ -49,20 +55,20 @@ INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_QKA904' (0#1) [c:
 INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1HDTDOQ' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:379]
 INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1HDTDOQ' (0#1) [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:379]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O9QZCP' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:500]
-INFO: [Synth 8-3491] module 'design_pynq_auto_pc_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'design_pynq_auto_pc_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:683]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_auto_pc_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_pynq_auto_pc_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'design_pynq_auto_pc_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:683]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_auto_pc_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O9QZCP' (0#1) [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:500]
-INFO: [Synth 8-3491] module 'design_pynq_xbar_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'design_pynq_xbar_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:1471]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_xbar_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-3491] module 'design_pynq_xbar_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'design_pynq_xbar_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:1471]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_xbar_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_xbar_0_stub.vhdl:52]
 INFO: [Synth 8-256] done synthesizing module 'design_pynq_ps7_0_axi_periph_0' (0#1) [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:876]
-INFO: [Synth 8-3491] module 'design_pynq_read_adapter_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_read_adapter_0_0_stub.vhdl:6' bound to instance 'read_adapter_0' of component 'design_pynq_read_adapter_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2476]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_read_adapter_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_read_adapter_0_0_stub.vhdl:39]
-INFO: [Synth 8-3491] module 'design_pynq_rst_ps7_0_50M_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_rst_ps7_0_50M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_50M' of component 'design_pynq_rst_ps7_0_50M_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2506]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_rst_ps7_0_50M_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_rst_ps7_0_50M_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_pynq_write_adapter_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_write_adapter_0_0_stub.vhdl:6' bound to instance 'write_adapter_0' of component 'design_pynq_write_adapter_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2519]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_write_adapter_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_write_adapter_0_0_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'design_pynq_xadc_wiz_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_xadc_wiz_0_0_stub.vhdl:6' bound to instance 'xadc_wiz_0' of component 'design_pynq_xadc_wiz_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2550]
-INFO: [Synth 8-638] synthesizing module 'design_pynq_xadc_wiz_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-18304-FT-6K64K74/realtime/design_pynq_xadc_wiz_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_pynq_read_adapter_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_read_adapter_0_0_stub.vhdl:6' bound to instance 'read_adapter_0' of component 'design_pynq_read_adapter_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2476]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_read_adapter_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_read_adapter_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_pynq_rst_ps7_0_50M_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_rst_ps7_0_50M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_50M' of component 'design_pynq_rst_ps7_0_50M_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2506]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_rst_ps7_0_50M_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_rst_ps7_0_50M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'design_pynq_write_adapter_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_write_adapter_0_0_stub.vhdl:6' bound to instance 'write_adapter_0' of component 'design_pynq_write_adapter_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2519]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_write_adapter_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_write_adapter_0_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'design_pynq_xadc_wiz_0_0' declared at 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_xadc_wiz_0_0_stub.vhdl:6' bound to instance 'xadc_wiz_0' of component 'design_pynq_xadc_wiz_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2550]
+INFO: [Synth 8-638] synthesizing module 'design_pynq_xadc_wiz_0_0' [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/.Xil/Vivado-39548-FT-6K64K74/realtime/design_pynq_xadc_wiz_0_0_stub.vhdl:39]
 INFO: [Synth 8-3491] module 'design_pynq_xlconstant_0_0' declared at 'c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/ip/design_pynq_xlconstant_0_0/synth/design_pynq_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'design_pynq_xlconstant_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/synth/design_pynq.vhd:2580]
 INFO: [Synth 8-6157] synthesizing module 'design_pynq_xlconstant_0_0' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/ip/design_pynq_xlconstant_0_0/synth/design_pynq_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
@@ -99,18 +105,18 @@ WARNING: [Synth 8-7129] Port M03_ARESETN in module design_pynq_ps7_0_axi_periph_
 WARNING: [Synth 8-7129] Port S00_ACLK in module design_pynq_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_pynq_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1502.219 ; gain = 557.879
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1507.852 ; gain = 560.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1502.219 ; gain = 557.879
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1507.852 ; gain = 560.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1502.219 ; gain = 557.879
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1507.852 ; gain = 560.887
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1502.219 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1507.852 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -135,35 +141,79 @@ Parsing XDC File [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/b
 Finished Parsing XDC File [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/ip/design_pynq_xadc_wiz_0_0/design_pynq_xadc_wiz_0_0/design_pynq_xadc_wiz_0_0_in_context.xdc] for cell 'design_pynq_i/xadc_wiz_0'
 Parsing XDC File [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/ip/design_pynq_axi_dma_0_0/design_pynq_axi_dma_0_0/design_pynq_axi_dma_0_0_in_context.xdc] for cell 'design_pynq_i/axi_dma_0'
 Finished Parsing XDC File [c:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.gen/sources_1/bd/design_pynq/ip/design_pynq_axi_dma_0_0/design_pynq_axi_dma_0_0/design_pynq_axi_dma_0_0_in_context.xdc] for cell 'design_pynq_i/axi_dma_0'
-Parsing XDC File [C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc]
-WARNING: [Vivado 12-180] No cells matched '.*CHOICE_PUF.*gen.*/.*/.*/.*'. [C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc:2]
-WARNING: [Vivado 12-180] No cells matched 'design_1_i/CHOICE_PUF_gen_0'. [C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc:3]
-WARNING: [Vivado 12-180] No cells matched 'design_1_i/xadc_wiz_0/U0/AXI_XADC_CORE_I/XADC_INST'. [C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc:3]
-Finished Parsing XDC File [C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA/CHOICE-PUF/hw_src/constraints/base_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_pynq_wrapper_propImpl.xdc].
+Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc]
+WARNING: [Vivado 12-180] No cells matched '.*CHOICE_PUF.*gen.*/.*/.*/.*'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc:2]
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/CHOICE_PUF_gen_0'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc:3]
+WARNING: [Vivado 12-180] No cells matched 'design_1_i/xadc_wiz_0/U0/AXI_XADC_CORE_I/XADC_INST'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc:3]
+Finished Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/base_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_pynq_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_pynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/FPGA/CHOICE-PUF/hw_src/constraints/PUF_constraints.xdc]
-Finished Parsing XDC File [C:/FPGA/CHOICE-PUF/hw_src/constraints/PUF_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA/CHOICE-PUF/hw_src/constraints/PUF_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_pynq_wrapper_propImpl.xdc].
+Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc]
+Finished Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/imports/constraints/PUF_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_pynq_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_pynq_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_runs' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:1]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_runs' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:2]
+CRITICAL WARNING: [Designutils 20-1307] Command 'launch_runs' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:3]
+CRITICAL WARNING: [Designutils 20-1307] Command 'INFO:' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:4]
+CRITICAL WARNING: [Designutils 20-1307] Command 'IP_Flow' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:4]
+CRITICAL WARNING: [Designutils 20-1307] Command 'WARNING:' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:5]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Vivado' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:5]
+CRITICAL WARNING: [Common 17-1548] Command failed: invalid command name "Mon"
+ [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:6]
+CRITICAL WARNING: [Designutils 20-1307] Command '[Mon Apr 14 16:44:42 2025]' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:6]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Mon' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:6]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Run' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:7]
+CRITICAL WARNING: [Common 17-1548] Command failed: invalid command name "Mon"
+ [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:8]
+CRITICAL WARNING: [Designutils 20-1307] Command '[Mon Apr 14 16:44:42 2025]' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:8]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Mon' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:8]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Run' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'sys_clk'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'sys_clk'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sys_clk'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'resetn'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'resetn'. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:21]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_runs' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:32]
+CRITICAL WARNING: [Designutils 20-1307] Command 'reset_runs' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:33]
+CRITICAL WARNING: [Designutils 20-1307] Command 'launch_runs' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:34]
+CRITICAL WARNING: [Designutils 20-1307] Command 'INFO:' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:35]
+CRITICAL WARNING: [Designutils 20-1307] Command 'IP_Flow' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:35]
+CRITICAL WARNING: [Designutils 20-1307] Command 'WARNING:' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:36]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Vivado' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:36]
+CRITICAL WARNING: [Common 17-1548] Command failed: invalid command name "Mon"
+ [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:37]
+CRITICAL WARNING: [Designutils 20-1307] Command '[Mon Apr 14 16:44:42 2025]' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:37]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Mon' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:37]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Run' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:38]
+CRITICAL WARNING: [Common 17-1548] Command failed: invalid command name "Mon"
+ [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:39]
+CRITICAL WARNING: [Designutils 20-1307] Command '[Mon Apr 14 16:44:42 2025]' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:39]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Mon' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:39]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Run' is not supported in the xdc constraint file. [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc:40]
+Finished Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.srcs/constrs_1/new/choice_pynq.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_pynq_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1510.633 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1511.801 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1510.633 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1511.801 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -442,10 +492,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_pynq_i/xadc_wiz_0. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for design_pynq_i/axi_dma_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_pynq_i/xlconstant_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -478,25 +528,25 @@ WARNING: [Synth 8-7129] Port M03_ARESETN in module design_pynq_ps7_0_axi_periph_
 WARNING: [Synth 8-7129] Port S00_ACLK in module design_pynq_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module design_pynq_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1511.801 ; gain = 564.836
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -514,37 +564,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -582,24 +632,25 @@ Report Cell Usage:
 |10    |design_pynq_xbar_0_bbox                 |     1|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 1510.633 ; gain = 557.879
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1510.633 ; gain = 566.293
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1512.578 ; gain = 561.664
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.578 ; gain = 565.613
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1510.633 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1512.578 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1510.633 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1531.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: b502b7cb
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+65 Infos, 49 Warnings, 30 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1513.730 ; gain = 1013.758
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:02 . Memory (MB): peak = 1535.309 ; gain = 1013.184
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/FPGA/CHOICE-PUF/CHOICE_design/CHOICE_design.runs/synth_1/design_pynq_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_pynq_wrapper_utilization_synth.rpt -pb design_pynq_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 14 17:06:15 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 14 17:44:09 2025...
