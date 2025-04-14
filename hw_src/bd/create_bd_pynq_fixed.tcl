@@ -20,15 +20,6 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2020.1
-set current_vivado_version [version -short]
-
-if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
-   puts ""
-   catch {common::send_gid_msg -ssname BD::TCL -id 2041 -severity "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
-
-   return 1
-}
 
 ################################################################
 # START
@@ -56,7 +47,8 @@ if { $list_projs eq "" } {
 
 # CHANGE DESIGN NAME HERE
 variable design_name
-set design_name design_1
+set design_name design_pynq
+
 
 # If you do not already have an existing IP Integrator design open,
 # you can create a design using the following command:
@@ -1030,10 +1022,10 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_UIPARAM_DDR_DQS_3_LENGTH_MM {0} \
    CONFIG.PCW_UIPARAM_DDR_DQS_3_PACKAGE_LENGTH {71.7715} \
    CONFIG.PCW_UIPARAM_DDR_DQS_3_PROPOGATION_DELAY {160} \
-   CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 {-0.073} \
-   CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 {-0.034} \
-   CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 {-0.03} \
-   CONFIG.PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 {-0.082} \
+   # Removed: Invalid negative DQS skew \
+   # Removed: Invalid negative DQS skew \
+   # Removed: Invalid negative DQS skew \
+   # Removed: Invalid negative DQS skew \
    CONFIG.PCW_UIPARAM_DDR_DQ_0_LENGTH_MM {0} \
    CONFIG.PCW_UIPARAM_DDR_DQ_0_PACKAGE_LENGTH {104.5365} \
    CONFIG.PCW_UIPARAM_DDR_DQ_0_PROPOGATION_DELAY {160} \
@@ -1165,7 +1157,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net PUF_controller_0_ff_reset [get_bd_pins CHOICE_PUF_gen_0/ff_reset] [get_bd_pins PUF_controller_0/ff_reset]
   connect_bd_net -net PUF_controller_0_read_ready [get_bd_pins PUF_controller_0/read_ready] [get_bd_pins read_adapter_0/data_out_ready]
   connect_bd_net -net PUF_controller_0_write_valid [get_bd_pins PUF_controller_0/write_valid] [get_bd_pins write_adapter_0/data_in_valid]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins CHOICE_PUF_gen_0/clk] [get_bd_pins PUF_controller_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins read_adapter_0/s00_axi_aclk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins write_adapter_0/s00_axi_aclk] [get_bd_pins xadc_wiz_0/s_axi_aclk]
+  set_property CONFIG.FREQ_HZ 50000000 [get_bd_pins CHOICE_PUF_gen_0/clk]
+connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins CHOICE_PUF_gen_0/clk] [get_bd_pins PUF_controller_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins read_adapter_0/s00_axi_aclk] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins write_adapter_0/s00_axi_aclk] [get_bd_pins xadc_wiz_0/s_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net read_adapter_0_data_out [get_bd_pins PUF_controller_0/payload] [get_bd_pins read_adapter_0/data_out]
   connect_bd_net -net read_adapter_0_data_out_valid [get_bd_pins PUF_controller_0/read_valid] [get_bd_pins read_adapter_0/data_out_valid]
